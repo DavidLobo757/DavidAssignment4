@@ -61,7 +61,7 @@ public class User implements Comparable<User>{
 		public int compareTo(User that) {
 			int compareIntC = that.getRole().compareTo(this.getRole());
 			if (compareIntC == 0) {
-				compareIntC = this.getUserName().compareTo(that.getUserName());
+				compareIntC = this.getUserName().compareToIgnoreCase(that.getUserName());
 			
 		} return compareIntC;	
 		

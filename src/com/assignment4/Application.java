@@ -11,6 +11,7 @@ public class Application {
 	public int loginAttempts = 0;
 	Scanner scanner = new Scanner(System.in);
 	
+	// start
 	public void login(User[] users, Application application, WritingFiles writingFiles,  UserService userService) throws IOException {
 		 
 			for (int i = 0; i < 5; i++)	{
@@ -25,15 +26,11 @@ public class Application {
 			
 			if (verifyUser != null) {
 				System.out.println("Welcome: " + verifyUser.getName());
-				
 				User userLoggedIn = verifyUser;
-				
 				checkForRole(writingFiles, application, users, userLoggedIn, verifyUser, userService);
-				
 				break;
 			} 
 			if(verifyUser == null && i > 3){
-				
 				System.out.println("Too many failed login attempts, you are now locked out.");
 				break;
 			}
@@ -46,6 +43,7 @@ public class Application {
 			
 			
 	}
+	// end
 	
 // vvv This checks for the users role vvv
  
